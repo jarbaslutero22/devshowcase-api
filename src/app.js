@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+
 const profileRoutes = require("./routes/profileRoutes");
+const technologyRoutes = require("./routes/technologyRoutes");
 
 const app = express();
 
@@ -14,5 +16,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/profiles", profileRoutes);
+app.use("/api/technologies", technologyRoutes);
 
 module.exports = app;
